@@ -1,29 +1,107 @@
-## "Fresh Tomato" Predictor: Predicting Movie Success on Rotten Tomatoes
+<p align="center">
+   
+</p>
+
+<p align="left">
+  <img src="https://img.shields.io/badge/Project_Complete-%E2%9C%94-2ECC71?style=flat-square&logo=checkmarx&logoColor=white" alt="Project Complete"/>
+  <img src="https://img.shields.io/badge/Python-3.9+-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"/>
+  <img src="https://img.shields.io/badge/Pandas-Data_Analysis-150458?style=flat-square&logo=pandas&logoColor=white" alt="Pandas"/>
+  <img src="https://img.shields.io/badge/scikit--learn-ML_Modeling-F7931E?style=flat-square&logo=scikit-learn&logoColor=white" alt="scikit-learn"/>
+  <img src="https://img.shields.io/badge/XGBoost-Advanced_Model-5C2D91?style=flat-square&logo=xgboost&logoColor=white" alt="XGBoost"/>
+  <img src="https://img.shields.io/badge/Seaborn-Visualization-3AA0E6?style=flat-square&logo=seaborn&logoColor=white" alt="Seaborn"/>
+</p>
+
+An in-depth analysis of movie metadata to build a Machine Learning model capable of predicting critical success and discovering which features define a hit film.
+
+### [Notebook](https://github.com/Ricardouchub/rotten-tomatoes-critics-nlp/blob/main/Notebook.ipynb)
 
 ---
-### **Objective**
-The goal was to build a machine learning model to predict if a movie would be a critical success ("Fresh") or failure ("Rotten") on Rotten Tomatoes, based on its metadata.
+
+## **Table of Contents**
+1. [Project Description](#1-project-description)
+2. [Dataset](#2-dataset)
+3. [Feature Engineering & EDA](#3-feature-engineering-eda)
+4. [Iterative Modeling & Evaluation](#4-iterative-modeling-evaluation)
+5. [Conclusions & Key Findings](#5-conclusion-key-findings)
+6. [Tools](#6-tools)
+7. [Author](#7-author)
 
 ---
-### **Methodology & Key Findings**
 
-This project demonstrated a complete, iterative data science workflow, from initial exploration to a final, optimized model that successfully predicted outcomes with 70% accuracy.
+## **1. Project Description**
+The objective of this project is to build and optimize a Machine Learning classification model to predict whether a movie will be a critical success ("Fresh") or a failure ("Rotten") on Rotten Tomatoes. The analysis focuses on using only the movie's metadata (genre, director, actors, etc.), simulating a prediction that could be made before its release and the publication of reviews.
 
-1.  **Baseline Model:** We began by establishing a **Logistic Regression** baseline, which achieved **65% accuracy**. This provided the initial benchmark to beat.
-
-2.  **Model Tuning:** A **Gradient Boosting Classifier** tuned with `GridSearchCV` improved our score to **66%**, showing the value of hyperparameter optimization.
-
-3.  **Advanced Feature Engineering (Iteration 1):** The first major breakthrough came from replacing a simple genre count with **one-hot encoded genres**. This allowed the model to learn the specific weight of each genre, pushing accuracy to **69%**.
-
-4.  **Advanced Feature Engineering (Iteration 2):** Creating features for only the **Top 30** most frequent actors, directors, and production companies provided the final performance boost to **70%**. This became our champion model's feature set.
-
-5.  **Final Stress Test:** A final experiment using one-hot encoding for *all* unique actors, directors, and companies also yielded 70% accuracy. This confirmed that our "Top 30" strategy was the most efficient approach, successfully capturing all the signal without adding unnecessary complexity or noise.
+The project covers a complete data science lifecycle, from initial cleaning and exploration to advanced feature engineering and model optimization to achieve maximum predictive performance.
 
 ---
-### **Conclusion**
 
-The final, champion model—a tuned **Gradient Boosting Classifier**—can predict a movie's critical success with **70% accuracy**.
+## **2. Dataset**
+This project uses the publicly available [Rotten Tomatoes Movies and Critic Reviews](https://www.kaggle.com/datasets/stefanoleone992/rotten-tomatoes-movies-and-critic-reviews-dataset) dataset from [Kaggle](https://www.kaggle.com). For this predictive analysis, the primary file used was:
 
-The project's success underscores a critical lesson in applied machine learning: **the key to unlocking performance often lies in intelligent feature engineering, not just model complexity**. By systematically progressing from simple features to more granular, high-signal representations, we measurably improved the model's predictive power at each step. The final model is both accurate and efficient, avoiding the computational cost and risk of overfitting associated with a brute-force encoding approach.
+`rotten_tomatoes_movies.csv`: Contains information on over 17,000 movies, including their rating, genre, director, actors, production company, and runtime.
 
-Congratulations on completing this extensive and highly successful machine learning project! You've demonstrated a full range of skills from data cleaning and EDA to advanced feature engineering, model tuning, and iterative improvement. 🎉
+---
+
+## **3. Feature Engineering & EDA**
+Before modeling, an exhaustive data preparation and feature creation process was carried out:
+
+* **Exploratory Data Analysis (EDA)**: The distribution of classes "Fresh" vs. "Rotten" was investigated, correlations between numerical variables were analyzed using heatmaps, and data integrity was validated.
+
+* **Simple Feature Engineering**: Basic numerical features were created from text, such as `release_year`, `num_genres`, `num_directors`, and `num_actors`.
+
+* **Advanced Feature Engineering**: To capture more complex signals, one-hot encoding techniques were implemented:
+
+    * **Genres**: A binary column was created for each unique genre (e.g., genre_Comedy, genre_Drama).
+
+    * **High-Impact Entities**: The Top 30 most frequent directors, actors, and production companies were identified, and binary columns were created for each. This proved to be an effective strategy for handling variables with thousands of unique values.
+
+---
+
+## **4. Iterative Modeling & Evaluation**
+Multiple models were trained and evaluated in an iterative process to find the best performer:
+
+  1. **Logistic Regression**: Established a solid baseline model with **65% accuracy**.
+
+  2. **Gradient Boosting (Tuned)**: Using GridSearchCV, the model's hyperparameters were optimized, achieving **66% accuracy**.
+
+  3. **Gradient Boosting with Advanced Features**: The champion model was the result of combining the optimized GradientBoostingClassifier with the most comprehensive feature set (including one-hot encoding for genres, actors, directors, and production companies) with **70% accuracy**
+
+**Final Evaluation Results**
+The final champion model, an optimized **Gradient Boosting Classifier** trained on the richest feature set, achieved a global accuracy of 70%. This result represented a 5-percentage-point improvement over the baseline model, demonstrating the success of the feature engineering and tuning process.
+
+## MATRIX PHOTO
+
+---
+
+## **5. Conclusions & Key Findings**
+The project's analysis and modeling revealed several key findings:
+
+**The 70% Ceiling**: The final model achieved a peak performance of 70%, suggesting that most of the predictive signal from the available metadata has been extracted. To surpass this threshold, additional data sources would likely be needed (e.g., marketing budget, trailer sentiment analysis).
+
+**Feature Engineering is Key**: The most significant performance improvement did not come from more complex algorithms but from smarter feature engineering. Moving from simply counting genres to representing them individually (one-hot encoding) was the most important leap.
+
+**The "Top N" as a Winning Strategy**: The technique of identifying and encoding only the most frequent entities (Top 30) proved to be the most efficient way to extract value from high-cardinality columns, avoiding performance issues and overfitting.
+
+## KEY FEATURES WEIGHTS PHOTO
+
+---
+
+## **6. Tools**
+**Language**: Python
+
+**Libraries**:
+
+* Pandas & NumPy for data manipulation and analysis.
+    
+* Scikit-learn for preprocessing, modeling, tuning (GridSearchCV), and evaluation.
+    
+* XGBoost for experimentation with advanced models.
+    
+* Matplotlib & Seaborn for data visualization.
+
+---
+
+## **7. Author**
+**Ricardo Urdaneta**
+
+Linkedin link
