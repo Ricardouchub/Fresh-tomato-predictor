@@ -15,9 +15,9 @@ This project demonstrated a complete, iterative data science workflow, from init
 
 3.  **Advanced Feature Engineering (Iteration 1):** The first major breakthrough came from replacing a simple genre count with **one-hot encoded genres**. This allowed the model to learn the specific weight of each genre, pushing accuracy to **69%**.
 
-4.  **Advanced Feature Engineering (Iteration 2):** Creating features for only the **Top 20** most frequent actors, directors, and production companies provided the final performance boost to **70%**. This became our champion model's feature set.
+4.  **Advanced Feature Engineering (Iteration 2):** Creating features for only the **Top 30** most frequent actors, directors, and production companies provided the final performance boost to **70%**. This became our champion model's feature set.
 
-5.  **Final Stress Test:** A final experiment using one-hot encoding for *all* unique actors, directors, and companies also yielded 70% accuracy. This confirmed that our "Top 20" strategy was the most efficient approach, successfully capturing all the signal without adding unnecessary complexity or noise.
+5.  **Final Stress Test:** A final experiment using one-hot encoding for *all* unique actors, directors, and companies also yielded 70% accuracy. This confirmed that our "Top 30" strategy was the most efficient approach, successfully capturing all the signal without adding unnecessary complexity or noise.
 
 ---
 ### **Conclusion**
