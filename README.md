@@ -13,7 +13,7 @@
 
 An in-depth analysis of movie metadata to build a Machine Learning model capable of predicting critical success and discovering which features define a hit film.
 
-### [Notebook](https://github.com/Ricardouchub/rotten-tomatoes-critics-nlp/blob/main/Notebook.ipynb)
+### [Notebook](https://github.com/Ricardouchub/Fresh-tomato-predictor/blob/main/Notebook.ipynb)
 
 ---
 
