@@ -1,4 +1,4 @@
-## "Fresh Tomato" Predictor
+## "Fresh Tomato" Predictor: Predicting Movie Success on Rotten Tomatoes
 
 ---
 ### **Objective**
