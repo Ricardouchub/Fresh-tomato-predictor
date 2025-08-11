@@ -20,9 +20,9 @@ An in-depth analysis of movie metadata to build a Machine Learning model capable
 ## **Table of Contents**
 1. [Project Description](#1-project-description)
 2. [Dataset](#2-dataset)
-3. [Feature Engineering & EDA](#3-feature-engineering-eda)
-4. [Iterative Modeling & Evaluation](#4-iterative-modeling-evaluation)
-5. [Conclusions & Key Findings](#5-conclusion-key-findings)
+3. [Eda and Feature Engineering](#3-eda-and-feature-engineering)
+4. [Modeling and Evaluation](#4-modeling-and-evaluation)
+5. [Key Findings](#5-key-findings)
 6. [Tools](#6-tools)
 7. [Author](#7-author)
 
@@ -42,7 +42,7 @@ This project uses the publicly available [Rotten Tomatoes Movies and Critic Revi
 
 ---
 
-## **3. Feature Engineering & EDA**
+## **3. EDA and Feature Engineering**
 Before modeling, an exhaustive data preparation and feature creation process was carried out:
 
 * **Exploratory Data Analysis (EDA)**: The distribution of classes "Fresh" vs. "Rotten" was investigated, correlations between numerical variables were analyzed using heatmaps, and data integrity was validated.
@@ -57,7 +57,7 @@ Before modeling, an exhaustive data preparation and feature creation process was
 
 ---
 
-## **4. Iterative Modeling & Evaluation**
+## **4. Modeling and Evaluation**
 Multiple models were trained and evaluated in an iterative process to find the best performer:
 
   1. **Logistic Regression**: Established a solid baseline model with **65% accuracy**.
@@ -73,7 +73,7 @@ The final champion model, an optimized **Gradient Boosting Classifier** trained 
 
 ---
 
-## **5. Conclusions & Key Findings**
+## **5. Key Findings**
 The project's analysis and modeling revealed several key findings:
 
 **The 70% Ceiling**: The final model achieved a peak performance of 70%, suggesting that most of the predictive signal from the available metadata has been extracted. To surpass this threshold, additional data sources would likely be needed (e.g., marketing budget, trailer sentiment analysis).
