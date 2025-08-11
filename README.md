@@ -1,4 +1,4 @@
-#  "Fresh Tomato" Predictor: Predicting Movie Success on Rotten Tomatoes
+# Predicting Movie Success on Rotten Tomatoes with Machine Learning
 
 <p align="left">
   <img src="https://img.shields.io/badge/Project_Complete-%E2%9C%94-2ECC71?style=flat-square&logo=checkmarx&logoColor=white" alt="Project Complete"/>
