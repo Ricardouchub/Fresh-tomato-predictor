@@ -1,6 +1,4 @@
-<p align="center">
-   
-</p>
+#  "Fresh Tomato" Predictor: Predicting Movie Success on Rotten Tomatoes
 
 <p align="left">
   <img src="https://img.shields.io/badge/Project_Complete-%E2%9C%94-2ECC71?style=flat-square&logo=checkmarx&logoColor=white" alt="Project Complete"/>
@@ -20,7 +18,7 @@ An in-depth analysis of movie metadata to build a Machine Learning model capable
 ## **Table of Contents**
 1. [Project Description](#1-project-description)
 2. [Dataset](#2-dataset)
-3. [Eda and Feature Engineering](#3-eda-and-feature-engineering)
+3. [EDA and Feature Engineering](#3-eda-and-feature-engineering)
 4. [Modeling and Evaluation](#4-modeling-and-evaluation)
 5. [Key Findings](#5-key-findings)
 6. [Tools](#6-tools)
