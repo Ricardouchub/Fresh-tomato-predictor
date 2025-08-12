@@ -67,7 +67,8 @@ Multiple models were trained and evaluated in an iterative process to find the b
 **Final Evaluation Results**
 The final champion model, an optimized **Gradient Boosting Classifier** trained on the richest feature set, achieved a global accuracy of 70%. This result represented a 5-percentage-point improvement over the baseline model, demonstrating the success of the feature engineering and tuning process.
 
-## MATRIX PHOTO
+<img width="505" height="423" alt="image" src="https://github.com/user-attachments/assets/f8c40154-8250-4b84-be56-ff6f7a09b66e" />
+
 
 ---
 
@@ -78,9 +79,10 @@ The project's analysis and modeling revealed several key findings:
 
 **Feature Engineering is Key**: The most significant performance improvement did not come from more complex algorithms but from smarter feature engineering. Moving from simply counting genres to representing them individually (one-hot encoding) was the most important leap.
 
-**The "Top N" as a Winning Strategy**: The technique of identifying and encoding only the most frequent entities (Top 30) proved to be the most efficient way to extract value from high-cardinality columns, avoiding performance issues and overfitting.
+**"Top 30" as a Winning Strategy**: The technique of identifying and encoding only the most frequent entities proved to be the most efficient way to extract value from high-cardinality columns, avoiding performance issues and overfitting.
 
-## KEY FEATURES WEIGHTS PHOTO
+<img width="1209" height="844" alt="image" src="https://github.com/user-attachments/assets/63a21adf-19f0-4d3f-a94f-1d36a706395a" />
+
 
 ---
 
@@ -89,13 +91,13 @@ The project's analysis and modeling revealed several key findings:
 
 **Libraries**:
 
-* Pandas & NumPy for data manipulation and analysis.
+* Pandas and NumPy for data manipulation and analysis.
     
-* Scikit-learn for preprocessing, modeling, tuning (GridSearchCV), and evaluation.
+* Scikit-learn for preprocessing, modeling, tuning with GridSearchCV, and evaluation.
     
 * XGBoost for experimentation with advanced models.
     
-* Matplotlib & Seaborn for data visualization.
+* Matplotlib and Seaborn for data visualization.
 
 ---
 
