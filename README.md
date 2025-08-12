@@ -104,4 +104,4 @@ The project's analysis and modeling revealed several key findings:
 ## **7. Author**
 **Ricardo Urdaneta**
 
-Linkedin link
+[**LinkedIn**](https://www.linkedin.com/in/ricardourdanetacastro/)
