@@ -1,4 +1,4 @@
-# Predicting Movie Success on Rotten Tomatoes with Machine Learning
+# "Predicting" Movie Success on Rotten Tomatoes with Machine Learning
 
 <p align="left">
   <img src="https://img.shields.io/badge/Project_Complete-%E2%9C%94-2ECC71?style=flat-square&logo=checkmarx&logoColor=white" alt="Project Complete"/>
@@ -9,7 +9,7 @@
   <img src="https://img.shields.io/badge/Seaborn-Visualization-3AA0E6?style=flat-square&logo=seaborn&logoColor=white" alt="Seaborn"/>
 </p>
 
-An in-depth analysis of movie metadata to build a Machine Learning model capable of predicting critical success and discovering which features define a hit film.
+An analysis of movie metadata to build a Machine Learning model capable of predicting critical success and discovering which "features" could define a hit film.
 
 ### [Notebook](https://github.com/Ricardouchub/Fresh-tomato-predictor/blob/main/Notebook.ipynb)
 
