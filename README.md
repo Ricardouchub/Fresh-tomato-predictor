@@ -79,9 +79,7 @@ The project's analysis and modeling revealed several key findings:
 
 **Feature Engineering is Key**: The most significant performance improvement did not come from more complex algorithms but from smarter feature engineering. Moving from simply counting genres to representing them individually (one-hot encoding) was the most important leap.
 
-**"Top 30" as a Winning Strategy**: The technique of identifying and encoding only the most frequent entities proved to be the most efficient way to extract value from high-cardinality columns, avoiding performance issues and overfitting.
-
-<img width="1209" height="844" alt="image" src="https://github.com/user-attachments/assets/63a21adf-19f0-4d3f-a94f-1d36a706395a" />
+**"Top 30" Strategy**: The technique of identifying and encoding only the most frequent entities proved to be the most efficient way to extract value from high-cardinality columns, avoiding performance issues and overfitting.
 
 
 ---
